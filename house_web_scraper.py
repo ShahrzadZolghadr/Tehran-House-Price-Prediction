@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 """House_Web_Scraper.ipynb
 """
-
 import requests
 import re
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
-
 
 def replace_page_number(input, newPageNumber):
     return input.replace('1', newPageNumber) 
@@ -15,7 +13,6 @@ def replace_page_number(input, newPageNumber):
 def clean_text(text):
   text = re.sub(r'\s+','', text)
   return text
-
 
 req_url = 'https://ihome.ir/sell-residential-apartment/th-tehran/?locations=iran.th.tehran&property_type=residential-apartment&paginate=30&page=1&is_sale=1&source=website&order_by=published_at&order_by_type=desc'
 req = requests.get(req_url)
@@ -82,4 +79,3 @@ for i in range(1,160):
   else:
     df = pd.DataFrame(list_of_tuples, columns = cls)
     Houses_df = Houses_df.append(df , ignore_index = True)
-
