@@ -1,2 +1,2 @@
 # Tehran-House-Price-Prediction
-Apply regression models on Tehran house features dataset which has been crawled from ihome.ir
+This repository contains regression models on Tehran house features dataset which has been crawled from ihome.ir. There are 17 features in every row and the sell_value column is the label. 
